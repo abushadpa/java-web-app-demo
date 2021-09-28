@@ -19,7 +19,7 @@ stringData:   # We can define multiple key value pairs.
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv-hostpath
+  name: pv-volume
 spec:
   storageClassName: manual
   capacity:
@@ -32,7 +32,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvc-hostpath
+  name: pvc-claim
 spec:
   storageClassName: manual
   accessModes:
@@ -107,7 +107,7 @@ spec:
        volumes:
        - name: mongodb-pvc
          persistentVolumeClaim:
-           claimName: pvc-hostpath
+           claimName: pvc-claim
        containers:
        - name: mongodbcontainer
          image: mongo
