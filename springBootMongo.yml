@@ -60,7 +60,7 @@ spec:
     spec:
       containers:
       - name: springappcontainer
-        image: abushad/spring-boot
+        image: abushad/java-web-app-demo
         ports:
         - containerPort: 8080
         env:
